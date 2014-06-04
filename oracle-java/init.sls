@@ -1,6 +1,8 @@
+{% set os_code = salt['grains.get']('oscodename') %}
+
 check_for_ppa:
   cmd.run:
-    - name: "[ -f /etc/apt/sources.list.d/webupd8team-java-precise.list ]; if [ $? == 1 ]; then echo -e '\nchanged=true'; fi"
+    - name: "[ -f /etc/apt/sources.list.d/webupd8team-java-{{ os_code }}.list ]; if [ $? == 1 ]; then echo -e '\nchanged=true'; fi"
     - stateful: True
 
 oracle-ppa:
