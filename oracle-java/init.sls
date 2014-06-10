@@ -7,6 +7,7 @@ oracle_java7_installer:
     - dist: {{ os_code }}
     - file: /etc/apt/sources.list.d/oracle.list
     - keyserver: keyserver.ubuntu.com
+    - keyid: EEA14886
     - require_in:
       - pkg: oracle-java7-installer
   pkg.installed:
