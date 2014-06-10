@@ -9,7 +9,7 @@ oracle_java7_installer:
     - keyserver: keyserver.ubuntu.com
     - require_in:
       - pkg: oracle-java7-installer
-  pkg.instaled:
+  pkg.installed:
     - name: oracle-java7-installer
 
 /etc/profile.d/java_home.sh:
